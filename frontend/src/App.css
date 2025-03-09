@@ -1,0 +1,273 @@
+.navbar {
+  width: 100%;
+  max-width: 1850px;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  padding: 15px;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Logo styles - aligned to the left */
+.logo-image {
+  height: 100px; /* Adjust the size as needed */
+  width: auto;
+  object-fit: contain;
+}
+
+/* Centered search bar */
+.search-container {
+  flex: 1; /* Takes available space */
+  display: flex;
+  justify-content: center;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 8px 12px;
+  border-radius: 20px;
+  border: 2px solid black; /* Black border */
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+  background: transparent;
+  color: black;
+  font-size: 16px;
+  padding: 5px;
+  width: 250px; /* Adjust width */
+}
+
+.search-icon {
+  margin-left: 8px;
+  color: black;
+  width:20px;
+  height:20px;
+}
+
+
+
+/* Right-aligned Create Account button */
+.nav-links a {
+  text-decoration: none; /* Removes underline */
+  font-family: Arial, sans-serif; /* Sets font */
+  font-size: 25px; /* Adjust font size */
+  color: goldenrod; /* Text color */
+  margin-right: 20px; /* Adds space between links */
+  font-weight: bold; /* Optional */
+}
+
+
+.nav-links {
+  display: flex;
+  gap: 20px; /* Spaces out the links */
+  list-style: none; /* Removes bullet points */
+  padding: 0;
+}
+
+.nav-links:hover {
+ /* Darker yellow */
+  color: black;
+  border-color: #ffaa00;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  border-bottom: 2px solid goldenrod;
+  padding-bottom: 5px;
+}
+
+.form-container {
+  background: #f9f9f9;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input,
+textarea {
+  margin: 10px 0;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: border-color 0.3s;
+}
+
+input:focus,
+textarea:focus {
+  border-color: goldenrod;
+  outline: none;
+}
+
+button {
+  padding: 12px;
+  background: goldenrod;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: #f8f8f8;
+  padding: 10px 0;
+}
+
+.marquee {
+  display: inline-block;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.marquee span {
+  display: inline-block;
+  padding-left: 100%;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  animation: scrollText 20s linear infinite;
+}
+
+@keyframes scrollText {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
+}
+
+
+
+.separate-button {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.separate-button li {
+  display: inline-block; /* Ensures it doesn’t take full width */
+}
+
+.separate-button li a {
+  display: inline-block; /* Makes it a box */
+  padding: 10px 20px; /* Adjust padding for a box effect */
+  background-color: goldenrod; /* Box color */
+  color: white; /* Text color */
+  border: 2px solid black; /* Optional: Adds a border */
+  border-radius: 5px; /* Rounds the corners */
+  text-decoration: none; /* Removes underline */
+  font-weight: bold; /* Makes text bold */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.separate-button li a:hover {
+  background-color: orange; /* Changes color on hover */
+}
+
+/* Dropdown Container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Main Dropdown Button */
+.dropdown > a {
+  text-decoration: none;
+  padding: 10px 15px;
+  background-color: goldenrod;
+  color: white;
+  border: 2px solid black;
+  border-radius: 5px;
+  display: inline-block;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Dropdown Menu (Hidden by Default) */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 150px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  list-style: none;
+  padding: 0;
+  margin-top: 5px;
+  z-index: 10;
+}
+
+/* Dropdown Menu Items */
+.dropdown-menu li {
+  padding: 10px;
+  text-align: left;
+}
+
+.dropdown-menu li a {
+  text-decoration: none;
+  color: black;
+  display: block;
+}
+
+/* Show Dropdown on Hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Background Image Styling */
+.background-image {
+  display: block;
+  width: 80vw;  /* Adjust width (try 100vw for full screen) */
+  height: 30vh; /* Maintains aspect ratio */
+  max-width: 100%; /* Prevents overflow */
+  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+
+/* Apply background to the entire body */
+
+
+/* Footer Styling */
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+}
+
+  
+
+
+
+
+
+
+
+
+
